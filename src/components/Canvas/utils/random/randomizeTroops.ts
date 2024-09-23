@@ -1,5 +1,5 @@
 import { Position } from "../../../../models/Position"
-import Troop, { TroopType } from "../../../../models/Troop"
+import { TroopType } from "../../../../models/Troop"
 import { renderLife } from "../render/renderLife"
 import { getRandomPosition } from "./getRandomPositions"
 import soldierA from '../../../../assets/images/soldierA.png'
