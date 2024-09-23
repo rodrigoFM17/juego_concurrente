@@ -2,12 +2,6 @@
     position: relative;
 }
 
-.container-game {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
 .canvas-cover {
     width: 100%;
     height: 99%;
@@ -21,28 +15,34 @@
 }
 
 .container-buttons {
-    height: fit-content;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
-    align-self: center;
+    gap: 10px;
 }
 
 .container-buttons button {
-    width: 100px;
-    height: 100px;
     background-color: #525252;
+    cursor: pointer;
     border: none;
     border-radius: 5px;
+    padding: 20px;
     color: yellow;
+    font-size: 30px;
     font-family: inherit;
     font-weight: 700;
 }
 
-.container-party{
+.container-party-info{
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 5px;
+}
+
+.container-party-info h1 {
+    width: 100%;
+    margin: 0;
 }
 
 .container-party  h2, .container-party span{
@@ -54,6 +54,36 @@
     color: white;
 }
 
-.container-party span {
+.container-game {
+    gap: 10px;
+    display: flex;
+}
+
+.container-game span{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    text-align: center;
     font-size: 50px;
+    color: white;
+}
+
+.container-game span span {
+    color: yellow;
+}
+
+.container-money {
+    display: grid;
+    width: 100%;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.container-money span {
+    width: 100%;
+    display: block;
+    background-color: #525252;
+    color: yellow;
+    border-radius: 5px;
+    font-size: 30px;
 }

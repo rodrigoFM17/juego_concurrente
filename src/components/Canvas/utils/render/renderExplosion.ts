@@ -1,8 +1,9 @@
 import explosion from '../../../../assets/images/tank_explosion.webp'
 import { Position } from '../../../../models/Position';
 import { renderGrid } from './renderGrid';
+import { renderTroops } from './renderTroops';
 
-export const renderExplosion = (ctx: CanvasRenderingContext2D, pointToAttack: Position) => {
+export const renderExplosion = (ctx: CanvasRenderingContext2D, pointToAttack: Position, matrixA:Position[][], matrixB: Position[][]) => {
   const imgExplosion = new Image();
   let i = 0;
   const radiusExplosion = parseInt(import.meta.env.VITE_RADIUS_EXPLOSION);
@@ -29,6 +30,8 @@ export const renderExplosion = (ctx: CanvasRenderingContext2D, pointToAttack: Po
         radiusExplosion * 2,
         radiusExplosion * 2
       );
+      renderGrid(ctx, 1280, 720)
+      renderTroops(ctx, matrixA, matrixB)
     }
   }, 100);
 };

@@ -15,11 +15,13 @@ export const renderLife = (
     // // const lifeWidth = (currentLife / maxLife) * w
     // lifePath.rect(x - 10, y - 15, 10 , 5)
     // ctx.fill(lifePath)
-    ctx.fillStyle = 'white'
-    ctx.fillRect(x - radius, y - (radius + radius / 2), w, 5)
-    ctx.fill()
-    ctx.fillStyle = "red"
-    const lifeWidth = (currentLife / maxLife) * w
-    ctx.fillRect(x - radius, y - (radius + radius / 2), lifeWidth , 5)
-    ctx.fill()
+    if(currentLife !== maxLife){
+        ctx.fillStyle = 'white'
+        ctx.fillRect(x - radius, y - (radius + radius / 2), w, 5)
+        ctx.fill()
+        ctx.fillStyle = "red"
+        const lifeWidth = (currentLife / maxLife) * w
+        ctx.fillRect(x - radius, y - (radius + radius / 2), lifeWidth , 5)
+        ctx.fill()
+    }
 }

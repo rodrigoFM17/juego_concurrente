@@ -1,0 +1,45 @@
+.game-help {
+    background-color: rgb(39, 75, 15);
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+  }
+  
+  .game-help span {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+    background-color: rgb(23, 51, 5);
+    font-size: 20px;
+  }
+  
+  .game-help span:first-child {
+    grid-column-start: span 4;
+  }
+
+  .game-help span:nth-child(2) {
+    grid-column-start: span 4;
+  }
+  .game-help span:nth-child(5) {
+    grid-column-start: span 2;
+  }
+  .game-help span:nth-child(7) {
+    grid-column-start: span 2;
+  }
+  .game-help span:nth-child(9) {
+    grid-column-start: span 2;
+  }
+  .game-help span:nth-child(10) {
+    grid-column-start: span 2;
+  }
+  .game-help span:nth-child(11) {
+    grid-column-start: span 3;
+  }
+  .game-help span span {
+    color: yellow;
+  }
