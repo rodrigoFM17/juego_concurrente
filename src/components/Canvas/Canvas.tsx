@@ -59,7 +59,7 @@ export default function Canvas() {
             const tanks = parseInt(import.meta.env.VITE_TANKS_NUMBER);
             const nPoints = parseInt(import.meta.env.VITE_DIVISION_LINES) - 1
 
-            const randomizeTroopsWorker = new Worker("./src/utils/workers/randomizeTroops.js")
+            const randomizeTroopsWorker = new Worker("/workers/randomizeTroops.js")
             randomizeTroopsWorker.postMessage({infantry, morter, cannon, tanks, matrixA: partyPlayerA.gameMatrix, matrixB: partyPlayerB.gameMatrix, nPoints})
             randomizeTroopsWorker.onmessage = (e) => {
                 const [matrixA, matrixB, troopsMatrixA, troopsMatrixB] = e.data
@@ -98,7 +98,7 @@ export default function Canvas() {
             let worker
             if(typeof(Worker) !== "undefined"){
                 if(typeof(worker) == "undefined"){  
-                    worker = new Worker("./src/utils/workers/getGameMatrix.js")
+                    worker = new Worker("/workers/getGameMatrix.js")
                     worker.postMessage({width: vw, height: vh, divisionLines})
                     worker.onmessage = (e) => {
                         const [matrixA, matrixB] = e.data

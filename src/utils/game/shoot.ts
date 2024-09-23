@@ -20,7 +20,7 @@ export const shoot = (
   console.log(attackerParty, attackedParty)
 
   for(let i=1; i <= (multipleShot ? 5 : 1); i++) {
-    const worker = new Worker("./src/utils/workers/randomizeShoot.js")
+    const worker = new Worker("/workers/randomizeShoot.js")
     worker.postMessage([attackedParty, attackerParty, multiplier, matrixLength, isPrecise])
     worker.onmessage = (e) => {
       const [success, attackerParty, attackedParty, attackedPoint, damage] = e.data
